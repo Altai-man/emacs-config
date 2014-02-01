@@ -35,10 +35,6 @@
 ;; Emacs jabber.
 (require 'jabber-autoloads)
 (custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
  '(Linum-format "%7i ")
  '(ansi-color-faces-vector [default bold shadow italic underline bold bold-italic bold])
  '(ansi-color-names-vector ["#242424" "#e5786d" "#95e454" "#cae682" "#8ac6f2" "#333366" "#ccaa8f" "#f6f3e8"])
@@ -216,7 +212,7 @@ static char *gnus-pointer[] = {
 (global-set-key "\C-cb" 'org-iswitchb)
 
 
-;; FIXME-BUG-TODO
+;; FIXME-BUG-TODO highlighting.
 (require 'fic-ext-mode)
 (fic-ext-mode)
 
@@ -224,12 +220,7 @@ static char *gnus-pointer[] = {
 ;; ECB custom.
 (require 'ecb)
 (require 'ecb-autoloads)
-(add-to-list 'ecb-excluded-directories-regexps "irina" )
 ;(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
  ;'(ecb-analyse-face ((t (:inherit ecb-default-highlight-face :background "black"))))
 ; '(ecb-default-highlight-face ((((class color) (min-colors 89)) (:background "#268bd2" :foreground "#fdf6e3"))))
 ; '(ecb-directory-face ((t (:inherit ecb-default-highlight-face :background "black")))))
@@ -270,7 +261,7 @@ static char *gnus-pointer[] = {
 (global-set-key "\C-x4" 'transpose-buffers)
 
 
-; go to the last change
+;; Last change
 (require 'goto-chg)
 (global-set-key "\C-q" 'goto-last-change)
 
@@ -287,7 +278,8 @@ static char *gnus-pointer[] = {
 (global-set-key "\C-ct" 'google-translate-at-point)
 (global-set-key "\C-cT" 'google-translate-query-translate)
 
-;; Getting things done.
+
+;; Getting things done scripts.
 (defun gtd ()
    (interactive)
    (find-file "~/.org/org/gtd.org") )
@@ -316,8 +308,4 @@ static char *gnus-pointer[] = {
   (c-set-style "linux"))
 (add-hook 'c++-mode-hook 'my-c++-mode-hook)
 (custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
  '(ecb-default-highlight-face ((t (:background "dim gray")))))
