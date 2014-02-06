@@ -23,9 +23,10 @@
 (global-auto-complete-mode t)
 
 
-;; Kill prevous word with C-w.
+;; Kill prevous word with C-w and goto-line.
 (global-set-key "\C-w" 'backward-kill-word)
 (global-set-key "\C-x\C-k" 'kill-region)
+(global-set-key "\C-x\C-g" 'goto-line)
 
 
 ;; Replacing query-replace-regexp to "qrr".
@@ -54,7 +55,7 @@
  '(ecb-layout-window-sizes (quote (("leftright1" (ecb-directories-buffer-name 0.171875 . 0.39215686274509803) (ecb-sources-buffer-name 0.171875 . 0.27450980392156865) (ecb-history-buffer-name 0.171875 . 0.3137254901960784) (ecb-methods-buffer-name 0.140625 . 0.9803921568627451)))))
  '(ecb-options-version "2.40")
  '(ecb-source-path (quote (("/" "/"))))
- '(ede-project-directories (quote ("/home/*user*")))
+ '(ede-project-directories (quote ("/home/sena" "/home/deb-user")))
  '(emms-mode-line-icon-image-cache (quote (image :type xpm :ascent center :data "/* XPM */
 static char *note[] = {
 /* width height num_colors chars_per_pixel */
@@ -101,8 +102,7 @@ static char *gnus-pointer[] = {
 \"###....####.######\",
 \"###..######.######\",
 \"###########.######\" };")))
- '(jabber-account-list (quote (("*server*" (:password . "*password*") 
-(:network-server . "*network-server*") (:connection-type . ssl)))))
+ '(jabber-account-list (quote (("altai@jabbim.com" (:password . "asldkhgauis") (:network-server . "jabbim.com") (:connection-type . ssl)))))
  '(linum-format " %6d ")
  '(main-line-color1 "#222232")
  '(main-line-color2 "#333343")
@@ -223,7 +223,7 @@ static char *gnus-pointer[] = {
 
 ;; ECB custom.
 (require 'ecb)
-(require 'ecb-autoloads)
+;;(require 'ecb-autoloads)
 (add-to-list 'ecb-excluded-directories-regexps "irina" )
 ;(custom-set-faces
  ;; custom-set-faces was added by Custom.
@@ -316,8 +316,4 @@ static char *gnus-pointer[] = {
   (c-set-style "linux"))
 (add-hook 'c++-mode-hook 'my-c++-mode-hook)
 (custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
  '(ecb-default-highlight-face ((t (:background "dim gray")))))
